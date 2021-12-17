@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        #grad{background: linear-gradient(to top, #33ccff 0%, #ff99cc 100%);
+        height: 100%;width: 100%;
+        background-repeat: no-repeat;background-size: cover;background-attachment: fixed;}
+        .login{
+            width: 20%;
+            height: 350px;
+            margin-left: 40%;
+            margin-top: 40px;
+            background-color:ivory;
+            font-weight: bold;
+        }
+        #login_header{
+            width: 100%;
+            height: 50px;
+            background-color: darkcyan;
+            text-align: center;
+            color: lightgoldenrodyellow;
+            padding-top: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 20px;
+        }
+        .login_format{
+            padding-left: 30px;
+            padding-top: 40px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 14px;
+            text-align: left;
+        }
+        .alignment-input {
+        width: 70%;
+        margin:10px 20px 10px 10px;
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        }
+        .button-submit{
+            padding: 10px 20px;
+            margin: 40px 5px 10px 27%;
+            background-color: dodgerblue;
+            border: 1px solid #ddd;
+            color: white;}
+
+    </style>
+</head>
+<body id="grad">
+    <div class="login">
+        <div id="login_header">
+            Login
+        </div>
+        <div class="login_format">
+            <form action="login" method="POST">
+                {% csrf_token %}
+                <input class="alignment-input" type="text" placeholder="Username" name="username">
+                <input class="alignment-input" type="password" placeholder="Password" name="password">
+                <a style="margin-left: 25px;padding-bottom: 25px;"  href="register">Create New Account</a>
+                <button class="button-submit" type="submit">Login</button>
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>
